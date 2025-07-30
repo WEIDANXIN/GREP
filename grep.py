@@ -16,16 +16,15 @@ ICD_ANNOT_FNAME = os.path.join(DATADIR, 'icd10_annotation_category.txt')
 
 # parse arguments
 parser = argparse.ArgumentParser()
-parser.add_argument('--genelist ./example/GENELIST.txt', '-g', default=None, type=str,
+parser.add_argument('--genelist', '-g', default=None, type=str,
     help='Filename of gene list to analyze.',
     required=True)
-parser.add_argument('--out my_GERP_test', '-o', default=None, type=str,
+parser.add_argument('--out', '-o', default=None, type=str,
     help='Output filename prefix.',
     required=True)
-parser.add_argument('--background ./example/simpleprotein.txt', '-b', default=None, type=str,
-    help='A list of all genes in the scope of your analysis if available.',
+parser.add_argument('--background', '-b', default=None, type=str,
     required=False)
-parser.add_argument('--test ATC', '-t', default=None, type=str, choices=['ATC', 'ICD'],
+parser.add_argument('--test', '-t', default=None, type=str, choices=['ATC', 'ICD'],
     help='Test mode : select from ATC or ICD.',
     required=True)
 parser.add_argument('--output-drug-name', '-d', default=False, action='store_true',
