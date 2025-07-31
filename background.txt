@@ -1,4 +1,3 @@
-x
 MYBPC2
 MYCBP2
 MYDGF
